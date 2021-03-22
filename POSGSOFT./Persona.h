@@ -26,7 +26,13 @@ public:
 	Persona( string, string, string, int, int, rolPersona );  
 	void crearPersona( int opcion1 );   
 	void mostrarPersona();  
-
+  string getNombre();
+	void setNombre( string nombre );
+	string getApellido();
+	void setApellidos( string apellido );
+	int getRolPersona();
+	void setRolPersona( rolPersona rol );
+	int getIdPersona();
 };
 
 #endif
