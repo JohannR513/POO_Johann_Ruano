@@ -5,7 +5,7 @@ Persona::Persona(){
 }
 
 
-Persona::Persona( string nombre, string apellido, string correoElectronico, int id, int telefono, rolPersona rol){
+Persona::Persona( string nombre, string apellido, string correoElectronico, int id, int telefono, string rol){
 	this -> nombre = nombre;
 	this->apellido = apellido;
 	this->correoElectronico = correoElectronico;
@@ -17,7 +17,7 @@ Persona::Persona( string nombre, string apellido, string correoElectronico, int 
 
 void Persona::crearPersona( int opcion1 ){  
 	int opcionJurado;   
-	int salida = 1;  
+	int bandera = 1;  
 	int temp; 
 	fflush( stdin );
 	cout << " Escribe tu(s) nombre(s): " << endl;
@@ -45,29 +45,29 @@ void Persona::crearPersona( int opcion1 ){
  	
  	
 	if( opcion1 == 1 ){
-		rolPersona = "Director";
+		rol = "Director";
 	}
 	else if( opcion1 == 2 ){
-		rolPersona = "Codirector";
+		rol = "Codirector";
 	}
 	else if(opcion1 == 3 ){
-		rolPersona = "Estudiante";
+		rol = "Estudiante";
 	}
 	else if( opcion1 == 4 ){
-		while( salida == 1 ){
+		while( bandera == 1 ){
 			cout << " Digite: \n 1. Si es jurado interno\n 2. Si es jurado externo\n" << endl;  
 			cin >> opcionJurado;
 			if( opcionJurado < 1 ){
 				cout << " Error!, esta no es una opcion valida" << endl; 
-				salida == 1;
+				bandera = 1;
 			}
 			else if( opcionJurado == 1 ){
-				rolPersona = "Jurado Interno";
-				salida = 0;
+				rol = "Jurado Interno";
+				bandera = 0;
 			}
 			else if( opcionJurado == 2 ){
-				rolPersona = "Jurado Externo";
-				salida = 0;
+				rol = "Jurado Externo";
+				bandera = 0;
 			}
 			else if( opcionJurado > 2){
 				cout << " Error!, esta no es una opcion valida" << endl;  
@@ -76,9 +76,9 @@ void Persona::crearPersona( int opcion1 ){
 }
 }
 void Persona::mostrarPersona(){
-	cout << "Nombres: " << this-> nombre << endl;
+	cout << "Nombres: " << this->nombre << endl;
 	cout << "Apellidos: " << this->apellido << endl;
-	cout << "Rol: " << this-> rol << endl;
+	cout << "Rol: " << this->rol << endl;
  }
  string Persona::getNombre(){
     return nombre;
@@ -93,15 +93,16 @@ string Persona::getApellido(){
     return apellido;
 }
 
-void Persona::setRolPersona( rolPersona rol ){
+void Persona::setRolPersona( string rol ){
     this->rol = rol;
     return;
 }
 
-int Persona::getRolPersona(){
+string Persona::getRolPersona(){
     return rol;
 } 
 
 int Persona::getIdPersona(){
 	return id;
 }
+
