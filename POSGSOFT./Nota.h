@@ -28,7 +28,12 @@ public:
 	void mostrarCalificacion(); 
 	double getNotaJuradoUno();  
 	double getNotaJuradoDos();  
-	double getPorcentajeNotaCriterio(); 
+	double getPorcentajeNota(); 
+  	void  crearNota(int idNota);
+  	void mostrarNota();
+  	string getObservacionJuradoUno();
+  	string getObservacionJuradoDos();
+
 };
 
 #endif
