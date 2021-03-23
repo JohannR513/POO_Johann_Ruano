@@ -6,6 +6,7 @@
 #include "Persona.h"
 #include "Nota.h"
 #include <list>
+#include <fstream>
 
 using std::list;
 using std::string;
@@ -19,7 +20,7 @@ class ActaGrado{
 
 private:
 	int numeroActa;
-	string fechaAct, nombreTrabajo, tipoTrabajo, periodo, estadoActa, estadoProyecto, comentarioAprobacion;
+	string fechaAct, nombreTrabajo, tipoTrabajo, periodo, estadoActa, comentarioAprobacion;
 	Persona autor, director, codirector, juradoUno, juradoDos;
 	bool existeCodirector = false;
 	double notaFinal;
@@ -29,8 +30,22 @@ private:
 
 public:
 	ActaGrado();  
-  ActaGrado( int, string, Persona, string, string, string, Persona, Persona, Persona, Persona, string, string, string, string, double );
-  void crearActa( int numeroActa );
+  	ActaGrado( int, string, Persona, string, string, Persona, Persona, Persona, Persona, string, string, string, string, double );
+  	void crearActa( int numeroActa );
+  	void agregarCriterio();
+	void mostrarNotas();
+	void calcularNotaFinal();
+	void setComentarioAprobacion();
+	string getTipoTrabajo();
+	string getNombreDirector();
+	string getNombrejuradoUno();
+	string getNombrejuradoDos();
+	void cerrarActa();
+	double getNotaDefinitiva();
+	string getComentarioAprobacion();
+	int getNumeroActa();
+	void visualizarActa();
+	void crearTxtActa();
 }; 
 
 #endif
