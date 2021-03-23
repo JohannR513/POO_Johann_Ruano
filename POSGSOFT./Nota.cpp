@@ -35,7 +35,7 @@ void Nota::crearNota(int idNota){
 	fflush(stdin);
 }
 
-void Nota::mostrarCalificacion(){
+void Nota::mostrarNota(){
 	criterio.mostrarCriterio(); 
 	cout << " Nota Jurado 1: " << notaJuradoUno << endl;
 	cout << " Nota Jurado 2: " << notaJuradoDos << endl;
@@ -53,6 +53,14 @@ double Nota::getNotaJuradoDos(){
 }
 
 
-double Nota::getPorcentajeNotaCriterio(){
+double Nota::getPorcentajeNota(){
 	return criterio.getPorcentajeNota();
+}
+
+string Nota::getObservacionJuradoUno(){
+	return observacion1;
+}
+
+string Nota::getObservacionJuradoDos(){
+	return observacion2;
 }
