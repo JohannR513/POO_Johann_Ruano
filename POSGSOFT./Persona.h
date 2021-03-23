@@ -18,20 +18,21 @@ private:
 	string correoElectronico;
 	int id;
 	int telefono;
-	enum rolPersona { Director = 1, Codirector = 2, Estudiante = 3, Jurado = 4 }; 
-  rolPersona rol;
+  string rol;
+	//enum rolPersona { Director = 1, Codirector = 2, Estudiante = 3, Jurado = 4 }; 
+  //rolPersona rol;
 
 public:
 	Persona(); 
-	Persona( string, string, string, int, int, rolPersona );  
+	Persona( string, string, string, int, int, string );  
 	void crearPersona( int opcion1 );   
 	void mostrarPersona();  
-  string getNombre();
+  	string getNombre();
 	void setNombre( string nombre );
 	string getApellido();
 	void setApellidos( string apellido );
-	int getRolPersona();
-	void setRolPersona( rolPersona rol );
+	void setRolPersona( string rol );
+  	string getRolPersona();
 	int getIdPersona();
 };
 
