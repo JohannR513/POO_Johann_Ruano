@@ -24,13 +24,11 @@ private:
 public:
 	Nota();  
 	Nota(Criterio, string, string, double, double);  
-	void crearNota( int idNota );  
-	void mostrarCalificacion(); 
+	void crearNota(int idNota);  
+	void mostrarNota(); 
 	double getNotaJuradoUno();  
 	double getNotaJuradoDos();  
 	double getPorcentajeNota(); 
-  	void  crearNota(int idNota);
-  	void mostrarNota();
   	string getObservacionJuradoUno();
   	string getObservacionJuradoDos();
 
