@@ -4,7 +4,7 @@
 ActaGrado::ActaGrado(){
 }
 
-ActaGrado::ActaGrado( int numeroActa, string fechaAct, Persona autor, string nombreTrabajo, string tipoTrabajo, string periodo, Persona director, Persona codirector, Persona juradoUno, Persona juradoDos, string comentarioAprobacion, double notaFinal );{
+ActaGrado::ActaGrado( int numeroActa, string fechaAct, Persona autor, string nombreTrabajo, string tipoTrabajo, string periodo, Persona director, Persona codirector, Persona juradoUno, Persona juradoDos, string comentarioAprobacion, double notaFinal ){
 	this->numeroActa = numeroActa;
 	this->fechaAct = fechaAct;
 	this->autor = autor;
