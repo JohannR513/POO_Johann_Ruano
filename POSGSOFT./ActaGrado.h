@@ -30,7 +30,7 @@ private:
 
 public:
 	ActaGrado();  
-  	ActaGrado( int, string, Persona, string, string, Persona, Persona, Persona, Persona, string, string, string, string, double );
+  	ActaGrado( int, string, Persona, string, string, string, Persona, Persona, Persona, Persona, string, double );
   	void crearActa( int numeroActa );
   	void agregarCriterio();
 	void mostrarNotas();
