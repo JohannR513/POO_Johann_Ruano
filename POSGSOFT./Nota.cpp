@@ -6,7 +6,7 @@ Nota::Nota (){
 }
 
 
-Nota::Nota(Criterio criterio, string observacion1, string observacion2, double notaJuradoUno, double notaJur2){
+Nota::Nota(Criterio criterio, string observacion1, string observacion2, double notaJuradoUno, double notaJuradoDos){
 	this->criterio = criterio;
 	this->observacion1 = observacion1;
 	this->observacion2 = observacion2;
@@ -15,8 +15,8 @@ Nota::Nota(Criterio criterio, string observacion1, string observacion2, double n
 }
 
 
-void Nota::crearNota(int idNota){
-	criterio.crearCriterio( int idCriterio );
+void Nota::crearNota( int idNota ){
+	criterio.crearCriterio( idNota );
 
 	cout << " Digite la nota 1: " << endl;
 	cin >> this->notaJuradoUno;
