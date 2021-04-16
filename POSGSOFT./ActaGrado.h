@@ -46,6 +46,14 @@ public:
 	int getNumeroActa();
 	void visualizarActa();
 	void crearTxtActa();
+    	string getEstadoActa();
+ 	void crearTxtActaCerrada();
+  	int getIdjuradoUno();
+	int getIdjuradoDos();
+	string getEstadoProyecto();
+	string getRoljuradoUno();
+	string getRoljuradoDos();
+  	void mostrarCriteriosEvaluacion();
 }; 
 
 #endif
