@@ -6,7 +6,7 @@ Persona::Persona(){
 
 
 Persona::Persona( string nombre, string apellido, string correoElectronico, int id, int telefono, string rol){
-	this -> nombre = nombre;
+	this->nombre = nombre;
 	this->apellido = apellido;
 	this->correoElectronico = correoElectronico;
 	this->id = id;
