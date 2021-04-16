@@ -195,7 +195,7 @@ void ActaGrado::visualizarActa(){
 }
 void ActaGrado::crearTxtActa(){  \
 	string nombre, apellido, rol;
-	if(estadoActa=="Cerrado"){  //valida si el estado del acta esta cerrada para hacer el txt 
+	if(estadoActa=="Cerrado"){  \
 		std::ofstream File;
   		File.open("Acta.txt");
 		File << "No. Acta: " << numeroActa << endl;
@@ -241,7 +241,7 @@ void ActaGrado::crearTxtActa(){  \
 		File << " Comentarios de aprobacion: " << comentarioAprobacion << endl;
 		File << "Estado acta: " << estadoActa << endl;
 		for( list<Nota>::iterator it2 = listaNotas.begin(); it2 != listaNotas.end(); it2++ ){
-			File << " Id del Criterio: " << it2->getIdCriterio() << endl;
+			File << " Numero del Criterio: " << it2->getIdCriterio() << endl;
 			File << " Porcentaje del criterio: " << it2->getPorcentajeNota() << endl;
 			File << " Nota del jurado 1 : " << it2->getNotaJuradoUno() << endl;
 			File << " Observaciones del jurado 1 : " << it2->getObservacionJuradoUno() << endl;
@@ -256,4 +256,28 @@ void ActaGrado::crearTxtActa(){  \
 		cout << "El acta no esta cerrada: " << endl;
 	}
 	return ;
+}
+string ActaGrado::getEstadoActa(){
+	return estadoActa;
+}
+int ActaGrado::getIdjuradoUno(){
+	return juradoUno.getIdPersona();
+}
+
+int ActaGrado::getIdjuradoDos(){
+	return juradoDos.getIdPersona();
+}
+string ActaGrado::getRoljuradoUno(){
+	return juradoUno.getRolPersona();
+}
+string ActaGrado::getRoljuradoDos(){
+	return juradoDos.getRolPersona();
+}
+void ActaGrado::mostrarCriteriosEvaluacion(){
+	list<Nota>::iterator itNota;
+	for( itNota = listaNotas.begin(); itNota != listaNotas.end(); itNota++ ){
+		cout << "Numero criterio: " << itNota->getIdCriterio() << endl;
+		cout << "Descripcion: " << itNota->getDescripcionCriterio() << endl;
+		cout << "Porcentaje nota: " << itNota->getPorcentajeNota() << endl;
+	}
 }
