@@ -31,6 +31,8 @@ public:
 	double getPorcentajeNota(); 
   	string getObservacionJuradoUno();
   	string getObservacionJuradoDos();
+  	int getIdCriterio();
+    	string getDescripcionCriterio();
 
 };
 
