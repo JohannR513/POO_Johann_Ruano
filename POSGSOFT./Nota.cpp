@@ -64,3 +64,9 @@ string Nota::getObservacionJuradoUno(){
 string Nota::getObservacionJuradoDos(){
 	return observacion2;
 }
+int Nota::getIdCriterio(){
+	return criterio.getIdCriterio();
+}
+string Nota::getDescripcionCriterio(){
+	return criterio.getDescripcionCriterio();
+}
