@@ -5,10 +5,10 @@ Criterio::Criterio(){
 }
 
 
-Criterio::Criterio(int idCriterio, double porcentajeNota, string observaciones){
+Criterio::Criterio(int idCriterio, double porcentajeNota, string descripcionCriterio){
 	this->idCriterio = idCriterio;
 	this->porcentajeNota = porcentajeNota; 
-	this->observaciones = observaciones;
+	this->descripcionCriterio = descripcionCriterio;
 }
 
 void Criterio::crearCriterio(int idCriterio){
@@ -19,14 +19,14 @@ void Criterio::crearCriterio(int idCriterio){
 
 	cout << " Escribe una descripcion: " << endl;
 	fflush(stdin);
-	getline(cin, observaciones);
+	getline(cin, descripcionCriterio);
 	fflush(stdin);
 
 }
 
 
 void Criterio::mostrarCriterio(){
-	cout << " Descripcion: " << observaciones << endl;
+	cout << " Descripcion: " << descripcionCriterio << endl;
 	cout << " Id: " << idCriterio<< endl;
 	cout << " Porcentaje nota: " << porcentajeNota << endl;
 }
@@ -35,4 +35,10 @@ double Criterio::getPorcentajeNota(){
 	return porcentajeNota;
 }
 
+int Criterio::getIdCriterio(){
+    return idCriterio;
+}
+string Criterio::getDescripcionCriterio(){
+    return descripcionCriterio;
+}
 
