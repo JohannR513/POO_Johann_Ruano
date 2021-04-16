@@ -16,7 +16,7 @@ class Criterio{
 private:
 	int idCriterio;
 	double porcentajeNota;
-	string observaciones;
+	string descripcionCriterio;
 
 public:
 	Criterio();  
@@ -24,7 +24,8 @@ public:
 	void crearCriterio( int idCriterio );  
 	void mostrarCriterio();  
 	double getPorcentajeNota();
- 
+	int getIdCriterio();
+  	string getDescripcionCriterio();
 };
 
 #endif
