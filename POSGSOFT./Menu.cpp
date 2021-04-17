@@ -31,9 +31,8 @@ int menu2(){
 	cout << "3. Consultar cuantos trabajo han sido dirigidos por un profesor " << endl;
 	cout << "4. Consultar en cuales actas ha sido jurado un profesor " << endl;
 	cout << "5. Ver la lista de jurados que han trabajo en las actas  " << endl;
-	cout << "6. Consultar las actas que estan en pendiente o rechazadas " << endl;
-	cout << "7. Consultar cuales jurados son internos y cuales son externos " << endl;
-	cout << "8. Consultar la lista de criterios de un acta " << endl;
+	cout << "6. Consultar cuales jurados son internos y cuales son externos " << endl;
+	cout << "7. Consultar la lista de criterios de un acta " << endl;
  	cout << "0. Volver al menu anterior " << endl;
 	cin >> opcion2;
 	
